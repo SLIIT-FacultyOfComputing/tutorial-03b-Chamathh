@@ -2,11 +2,12 @@
 using namespace std;
 
 void print(int len, int wth);
-void input(int len, int wth);
+void input(int &len, int &wth);
 
 // Do not change the main() function
 int main() {
    int length = 10, width = 5;
+  
    input(length, width);
    print(length, width);
    return 0;
@@ -14,8 +15,13 @@ int main() {
 
 // Do not change the print() function
 void print(int len, int wth) {
-   cout << "Length : " << len 
-        << ", Width  : " << wth << endl;
+   cout << "Length : " << len << ", Width  : " << wth << endl;
 }
+void input(int &len,int &wth)
+{
+  cout<<"Input the length: ";
+  cin>>len;
 
-// Implement the Input Function here
+  cout<<"Input the Width: ";
+  cin>>wth;  
+}
